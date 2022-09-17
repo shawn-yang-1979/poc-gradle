@@ -3,20 +3,17 @@
  */
 package poc.gradle.app;
 
-import poc.gradle.list.LinkedList;
+import java.math.BigDecimal;
 
-import static poc.gradle.utilities.StringUtils.join;
-import static poc.gradle.utilities.StringUtils.split;
-import static poc.gradle.app.MessageUtils.getMessage;
-
-import org.apache.commons.text.WordUtils;
+import poc.gradle.domain.Product;
 
 public class App {
-    public static void main(String[] args) {
-        LinkedList tokens;
-        tokens = split(getMessage());
-        String result = join(tokens);
-        System.out.println(WordUtils.capitalize(result));
-    }
-}
+	public static void main(String[] args) {
 
+		Product product = new Product();
+		product.setName("Gradle");
+		product.setDescription("Best product");
+		product.setPrice(BigDecimal.ONE);
+		System.out.println(product.toString());
+	}
+}

@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'poc-gradle'
-include('app', 'list', 'utilities')
+include('app', 'domain')
