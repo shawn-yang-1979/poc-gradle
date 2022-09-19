@@ -1,12 +1,15 @@
 plugins {
-    id 'war'
-    id 'org.gretty' version '4.0.3'
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
 }
 
 dependencies {
-    compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.0.0'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.13.4'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation project(':domain')
+    testImplementation 'org.mockito:mockito-core'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-gretty.httpPort = 8090
+tasks.named('test') {
+	useJUnitPlatform()
+}

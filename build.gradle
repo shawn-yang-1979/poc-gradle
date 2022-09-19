@@ -1,15 +1,10 @@
-// common
-subprojects {
-    apply plugin: 'java' 
-    
+subprojects {    
+    apply plugin: 'java'
     version = '0.0.1-SNAPSHOT'
     group = 'poc.gradle'
-
+    sourceCompatibility = '11'
+	
 	repositories {
         mavenCentral()
-    }
-
-    dependencies {
-        testImplementation 'junit:junit:4.13'
     }
 }
