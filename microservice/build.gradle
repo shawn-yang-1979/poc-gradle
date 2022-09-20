@@ -13,3 +13,11 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+publishing {
+	publications {
+		bootJar(MavenPublication) {
+			artifact tasks.named("bootJar")
+		}
+	}
+}
