@@ -5,7 +5,7 @@ plugins {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation project(':domain')
+    implementation 'poc.gradle:domain:0.0.1-SNAPSHOT'
     testImplementation 'org.mockito:mockito-core'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

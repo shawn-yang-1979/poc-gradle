@@ -6,6 +6,7 @@ subprojects {
     sourceCompatibility = '11'
 	repositories {
         mavenCentral()
+        mavenLocal()
     }
 	publishing {
 		publications {
